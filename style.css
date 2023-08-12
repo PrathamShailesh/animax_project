@@ -11,6 +11,7 @@ body {
     background-color: black;
 }
 
+
 /* Styling Header */
 header {
     background-image: url("https://kq-storage.s3.ap-south-1.amazonaws.com/Github/animax/animax-bg%5B1%5D.png");
@@ -54,6 +55,7 @@ nav {
 .button {
     background-color: #F50A5F;
     padding: 7px;
+    /* margin-left: 70%; */
 }
 
 a {
@@ -102,13 +104,49 @@ footer {
 }
 
 /* Iteration 1: Styling all the flex elements with (Justify-content:space-between) & (align-items:center) */
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 /* Iteration 2: Using flex-wrap */
+.movies{
+    flex-wrap: wrap;
+    margin: 4% 8%;
+}
 
 /* Iteration 3: Styling all the flex elements with (flex-direction:column), (Justify-content:space-evenly) */
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
 
 /* Iteration 4: Animation */
+#scroll{
+    position: relative;
+    animation: slide 2s infinite;
+}
+@keyframes slide {
+
+    0%{
+        transform: translateY(0px)
+    }
+
+    100%{
+        transform: translateY(80px);
+    }
+}
 
 /* Iteration 5: Making webpage mobile responsive */
 
 
+@media (max-width:600px){
+    .wrap-reverse{
+        flex-wrap: wrap-reverse;
+    }
+    .movies{
+        text-align: center;
+    }
+}
